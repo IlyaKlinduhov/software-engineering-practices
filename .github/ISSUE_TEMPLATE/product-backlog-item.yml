@@ -1,0 +1,37 @@
+name: Product Backlog Item
+description: Создать историю пользователя StudyFlow с критериями приёмки
+title: '[PBI] '
+body:
+  - type: input
+    id: ticket
+    attributes:
+      label: Ticket ID
+      description: Внешний идентификатор истории
+      placeholder: SF-PBI-011
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Описание
+      placeholder: Как пользователь, я хочу ..., чтобы ...
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Критерии приёмки
+      placeholder: Наблюдаемые условия успешного выполнения
+    validations:
+      required: true
+  - type: dropdown
+    id: activity
+    attributes:
+      label: Активность
+      options:
+        - Development
+        - Design
+        - Testing
+        - Planning
+    validations:
+      required: true
