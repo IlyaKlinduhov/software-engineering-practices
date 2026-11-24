@@ -1,0 +1,25 @@
+name: Self-hosted runner smoke check
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  smoke:
+    runs-on: [self-hosted, Windows, X64, studyflow]
+    timeout-minutes: 10
+    defaults:
+      run:
+        shell: powershell
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - name: Show runner capabilities
+        run: |
+          Write-Output 'Runner: ${{ runner.name }}; OS: ${{ runner.os }}; architecture: ${{ runner.arch }}'
+          python --version
+          git --version
+      - name: Run tests
+        run: python -m unittest -v
+      - name: Build catalogue
+        run: python build.py
