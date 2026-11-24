@@ -2,6 +2,8 @@
 
 Учебный проект по программной инженерии на GitHub. Каталог материалов служит общим примером для документации, гибкого планирования, Kanban, календаря поставок и CI/CD.
 
+[Приложение](https://ilyaklinduhov.github.io/software-engineering-practices/) · [Project](https://github.com/users/IlyaKlinduhov/projects/1) · [Wiki](https://github.com/IlyaKlinduhov/software-engineering-practices/wiki) · [Репозиторий документации](https://github.com/IlyaKlinduhov/software-engineering-docs) · [Отчёты](PRACTICES.md)
+
 ## Запуск
 
 Требуется Python 3.10 или новее. Внешних Python-пакетов нет.

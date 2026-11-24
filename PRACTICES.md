@@ -1,49 +1,101 @@
 # Практические работы по программной инженерии
 
-Все работы используют самостоятельный проект StudyFlow. Вместо Azure DevOps применяются GitHub Repositories, Wiki, Issues, Projects и Actions. Итоги ниже обновляются по фактически проверенным результатам.
+Проверено 24 ноября 2026 года. Все девять тем архива выполнены в варианте GitHub на самостоятельном проекте StudyFlow. Единственный незакрытый организационный пункт — приглашение 3–5 одногруппников из практики 1: их GitHub-логины не предоставлены.
 
-## Практика 1 Создание проекта
+[Код](https://github.com/IlyaKlinduhov/software-engineering-practices) · [Project](https://github.com/users/IlyaKlinduhov/projects/1) · [Wiki](https://github.com/IlyaKlinduhov/software-engineering-practices/wiki) · [Документация](https://github.com/IlyaKlinduhov/software-engineering-docs) · [Приложение](https://ilyaklinduhov.github.io/software-engineering-practices/)
 
-Создан публичный репозиторий `IlyaKlinduhov/software-engineering-practices`, задано описание, основная ветка `main`, добавлен учебный код. Wiki включена, редактирование ограничено участниками с правом записи. Владелец проекта — IlyaKlinduhov. Приглашение 3–5 коллег ожидает предоставления их GitHub-логинов.
+## Практика 1 Создание проекта и совместная работа
 
-## Практика 2 Работа с Wiki
+Создан публичный репозиторий StudyFlow, задано описание, основная ветка main, включены Issues, Projects, Wiki и GitHub Actions. Добавлены самостоятельное приложение, тестовые данные и изображение проекта 1280×640. Для Wiki проверено ограничение редактирования участниками с правом записи. Профиль владельца использует существующий аватар.
 
-Подготовлены страницы о назначении проекта, начале работы, окружении и команде. Документация также хранится рядом с кодом: `Our-team.md`, `PLANNING.md`, README. GitHub Wiki использует отдельный Git-репозиторий; порядок страниц задаётся боковым меню `_Sidebar`, которое заменяет Azure `.order`. Публикация произвольной ветки репозитория как дополнительной Wiki заменена версионируемой документацией в Code.
+Проверены страница репозитория, обложка и настройки Wiki. Код и история коммитов доступны в GitHub.
 
-## Подготовка 2 0 Тестовые данные
+[Репозиторий](https://github.com/IlyaKlinduhov/software-engineering-practices)
 
-Созданы `materials.json` с шестью материалами и `backlog.json` с десятью связанными плановыми задачами. Подготовлены Epic, Feature, три PBI и две Task, а также три истории для двухкомандного календаря. Это самостоятельная замена Azure Demo Generator; Azure, .NET и Full Access PAT не нужны.
+Остаётся приглашение 3–5 одногруппников: их GitHub-логины не предоставлены. Этот пункт не отмечен выполненным. Организация Azure заменена личным репозиторием и Project владельца.
 
-## Практика 3 Гибкое планирование
+## Практика 2 Wiki и документация в репозитории
 
-Декомпозиция идёт от Epic «Обучение продуктам» к Feature «Осваиваем дашборды», пользовательским историям и двум задачам. Определены спринты, область Web / Tutorials и активности Development/Design. Ёмкость Sprint 2 после пяти дней отпуска — 8 ч. После уточнения задачи с 5 до 8 ч суммарная оценка составляет 11 ч, перегрузка — 3 ч. Расчёт воспроизводится кодом и тестами.
+Созданы Home, начало работы, окружение разработки, команда, предстоящие события и страницы января/февраля. Боковое меню _Sidebar задаёт иерархию и порядок страниц. Страница окружения обновлена отдельным коммитом; в History сравнены исходная и уточнённая версии. Создан второй репозиторий документации: первоначальный README переименован в Our-team.md и затем дополнен отдельным коммитом. Добавлена вложенная папка Upcoming-events.
 
-## Практика 4 Kanban и процесс
+Проверены навигация Wiki, семь страниц, история и diff, а также шесть коммитов репозитория документации.
 
-Спроектированы статусы Backlog, Approved, Committed, QA Doing, QA Done, Done, срочная дорожка «Ускорение» и критерии переходов. Для QA Doing предусмотрен WIP 1. Labels отображают данные и UX/UI. Для PBI добавлена YAML-форма с обязательными Ticket ID, описанием, критериями приёмки и активностью. Контрольные запросы: задачи области Web / Tutorials, обзор Sprint 2 и ускоренная дорожка.
+[Wiki](https://github.com/IlyaKlinduhov/software-engineering-practices/wiki) · [Документация в коде](https://github.com/IlyaKlinduhov/software-engineering-docs)
 
-## Практика 5 Календарь поставок
+В GitHub нет Azure-функции публикации произвольной ветки как дополнительной Wiki. Её роль выполняет отдельный репозиторий Markdown. Вместо .order используются _Sidebar, оглавление README и префиксы 01/02.
 
-Учебные команды StudyFlow Web и External integrations работают по разным календарям. Корпоративная интеграция перенесена в Итерацию 50 (24 ноября – 11 декабря), погода — в Итерацию 51 (14 декабря – 1 января). Отслеживание доставки перенесено в Sprint 4 после окончания необходимой интеграции. Веха «Команда в отпуске» назначена на 27 ноября 2026 года. Тест проверяет устранение конфликта зависимости.
+## Подготовка 2 0 Подготовка тестовых данных
 
-## Практика 6 Собственный обработчик
+Созданы шесть демонстрационных учебных материалов и десять элементов backlog. Данные включают Epic, Feature, три пользовательские истории, две задачи и три истории для календаря поставок. В Issues добавлены описания, критерии приёмки, исполнитель, планы и внешние идентификаторы. Связана настоящая иерархия sub-issues: #1 → #2 → #3, #6, #7; #3 → #4, #5.
 
-Подготовлен workflow `Self-hosted runner smoke check` с ручным триггером и набором меток `self-hosted, Windows, X64, studyflow`. Он показывает возможности обработчика, получает исходники, запускает тесты и собирает приложение. Подключение и контрольный запуск фиксируются после регистрации runner.
+В репозитории доступны materials.json и backlog.json; в Project находятся десять основных элементов. Дополнительный Issue #11 использован только для проверки формы, закрыт и исключён из Project.
+
+[Исходные данные](https://github.com/IlyaKlinduhov/software-engineering-practices/blob/main/backlog.json) · [Issues](https://github.com/IlyaKlinduhov/software-engineering-practices/issues)
+
+Azure Demo Generator заменён самостоятельно подготовленным примером. Установка .NET, Azure и выпуск Full Access PAT для этого варианта не требуются.
+
+## Практика 3 Scrum и управление ёмкостью
+
+В публичном Project настроены поля уровня, команды, области, активности, часов и итерации. Созданы Sprint 1–4; на 24 ноября текущий Sprint 2 длится с 16 ноября по 2 декабря. Две задачи оценены в 8 и 3 часа. В календаре спринта 13 рабочих дней, пять дней отпуска 23–27 ноября и доступность 1 час в день: ёмкость 8 часов, план 11 часов, перегрузка 3 часа. Уточнённая оценка 8 часов и исходная 5 часов зафиксированы в #4.
+
+Проверены настоящие связи Epic → Feature → PBI → Task, представления Иерархия и Загрузка Sprint 2. Группировка по исполнителю показывает сумму 11 часов. Календарный расчёт проверяется автоматическим тестом.
+
+[Иерархия](https://github.com/users/IlyaKlinduhov/projects/1/views/1) · [Загрузка спринта](https://github.com/users/IlyaKlinduhov/projects/1/views/3) · [Расчёт](https://github.com/IlyaKlinduhov/software-engineering-practices/blob/main/studyflow.py)
+
+В персональном GitHub Projects нет встроенного Azure Capacity. Доступность, отпуск и перегрузка рассчитаны воспроизводимым кодом, описаны в Project и показаны в приложении. По условию практики 3 задача не перенесена из текущего спринта.
+
+## Практика 4 Kanban и настройка процесса
+
+Настроены шесть этапов Backlog, Approved, Committed, QA Doing, QA Done и Done. Для QA Doing установлен WIP 1. Созданы дорожки Обычная и Ускорение, цветные метки данные, ux/ui, development и Ускорение; на карточках видны дополнительные поля и Ticket ID. Критерии готовности записаны в описании процесса и этапа QA Done. Сохранены обзор спринта, веб-задачи и срочная дорожка. В Insights находятся три диаграммы.
+
+Проверено превышение WIP: временно в QA Doing находились две задачи, GitHub показал красное 2/1; после проверки восстановлен итоговый статус #5 Committed. Форма Product Backlog Item проверена созданием #11 с SF-PBI-011, затем контрольная карточка закрыта. Диаграммы показывают статусы семи элементов Sprint 2, 11 часов нагрузки и две веб-задачи.
+
+[Kanban](https://github.com/users/IlyaKlinduhov/projects/1/views/2) · [Обзор Sprint 2](https://github.com/users/IlyaKlinduhov/projects/1/insights/1) · [Нагрузка](https://github.com/users/IlyaKlinduhov/projects/1/insights/2) · [Веб-задачи по исполнителям](https://github.com/users/IlyaKlinduhov/projects/1/insights/3) · [Проверка формы](https://github.com/IlyaKlinduhov/software-engineering-practices/issues/11)
+
+Split column заменён двумя статусами QA Doing/QA Done. Наследуемый Scrum-процесс заменён полями Project и YAML-формой с обязательными Ticket ID, описанием, критериями приёмки и активностью.
+
+## Практика 5 Календарь поставок двух команд
+
+Создан Roadmap с датами Начало/Окончание и группировкой по StudyFlow Web и External integrations. Для внешней команды заданы Итерация 50 с 24 ноября по 11 декабря, перерыв 12–13 декабря и Итерация 51 с 14 декабря по 1 января. Корпоративная интеграция #8 перенесена в первую поставку, погодная #9 — во вторую, зависимое отслеживание #10 — в Sprint 4 после готовности #8. Создана веха Команда в отпуске на последнюю пятницу месяца, 27 ноября.
+
+В календаре видны две команды, девять незавершённых элементов, маркеры спринтов, поставок и контрольной вехи. Фильтр -status:Done скрывает #7. Автотест сначала выявляет конфликт зависимости, затем подтверждает его устранение.
+
+[Календарь](https://github.com/users/IlyaKlinduhov/projects/1/views/7) · [Контрольная веха](https://github.com/IlyaKlinduhov/software-engineering-practices/milestone/1) · [Зависимая задача](https://github.com/IlyaKlinduhov/software-engineering-practices/issues/10)
+
+Команды реализованы полем Project и группами Roadmap. Это учебные направления работы, а не вымышленные аккаунты участников. Неиспользуемая автоматически созданная Поставка 3 оставлена резервной.
+
+## Практика 6 Собственный обработчик GitHub Actions
+
+С официальной страницы GitHub получен Windows x64 runner 2.338.2; SHA256 архива проверен. Обработчик studyflow-windows зарегистрирован для учебного репозитория с labels self-hosted, Windows, X64, studyflow. Запущен пользовательским процессом без системной службы. Ручной workflow получил код, показал возможности обработчика, выполнил семь тестов и сборку.
+
+Контрольный запуск #45464936988 завершился Success; задание smoke выполнялось 27 секунд. После одного задания ephemeral runner автоматически снялся с регистрации, удалил .runner/.credentials и завершил процесс. Токен регистрации не включён в репозиторий или отчёты.
+
+[Успешный запуск](https://github.com/IlyaKlinduhov/software-engineering-practices/actions/runs/45464936988) · [Workflow](https://github.com/IlyaKlinduhov/software-engineering-practices/blob/main/.github/workflows/self-hosted-smoke.yml)
+
+Runner намеренно одноразовый; для повторного показа живого обработчика потребуется новая регистрация на странице Settings → Actions → Runners. В запуске checkout есть два предупреждения invalid pattern при работе с временным Windows-путём Git; тесты и сборка завершились успешно.
 
 ## Практика 7 Непрерывная интеграция
 
-Workflow `Continuous integration` запускается при push в `main` и вручную. В нём Python 3.12, семь тестов, сборка каталога и публикация артефакта с привязкой к SHA коммита. Срок хранения артефакта — 30 дней. Проверка автоматического триггера выполняется отдельным изменением заголовка приложения.
+Создан Continuous integration с событиями push в main и workflow_dispatch, Python 3.12, семью тестами и production-сборкой. Результат публикуется как studyflow-dist с SHA коммита; хранение 30 дней. Заголовок template.html изменён отдельным коммитом через веб-интерфейс GitHub, что автоматически запустило новый CI.
 
-## Дополнение 4 2 YAML и доставка
+Коммит e1966202c3ed590342e7e30ded731e14169a87b7 вызвал запуск #45468359294, результат Success. Отдельный ручной запуск #45469745957 также завершился Success. На странице автоматического запуска присутствует артефакт 4 KB, SHA256 55aa257e3564ef8d9fb919878465979757bc15a9a102929f8e7343751f98d4c6. Локально семь тестов также прошли.
 
-Workflow `Build and deploy StudyFlow` разделяет Build и Deploy через `needs`. Build сначала тестирует и собирает приложение, затем передаёт его как Pages artifact. Deploy публикует именно этот артефакт в GitHub Pages. Это адаптация Azure Web App + SQL к самостоятельному статическому примеру: данные хранятся в JSON, состояние истории — локально в браузере. Облачная база SQL и платные ресурсы Azure не создаются.
+[Автоматический CI](https://github.com/IlyaKlinduhov/software-engineering-practices/actions/runs/45468359294) · [Ручной CI](https://github.com/IlyaKlinduhov/software-engineering-practices/actions/runs/45469745957) · [Коммит-триггер](https://github.com/IlyaKlinduhov/software-engineering-practices/commit/e1966202c3ed590342e7e30ded731e14169a87b7) · [Workflow](https://github.com/IlyaKlinduhov/software-engineering-practices/blob/main/.github/workflows/ci.yml)
 
-## Проверка локального результата
+Для регулярного CI используется облачный runner; собственный Windows runner отдельно проверен в практике 6. Внешних Python-зависимостей нет, поэтому этап восстановления пакетов не требуется.
 
-24 ноября 2026 года: 7 тестов прошли; сборка сформировала `dist/index.html`, `materials.json`, `capacity.json`. Контрольные числа: available=8, planned=11, overload=3.
+## Дополнение 4 2 Многоэтапный YAML и автоматическая доставка
+
+Создан Build and deploy StudyFlow. Этап build получает исходники, выполняет тесты и сборку, затем передаёт Pages artifact. Этап deploy зависит от build через needs и публикует тот же результат в GitHub Pages. Для deploy заданы отдельные разрешения pages:write и id-token:write; build получает contents:read.
+
+Автоматический запуск #45468359550 после изменения заголовка завершил build и deploy успешно. Опубликованный сайт открылся с новым заголовком StudyFlow — каталог по программной инженерии. В браузере проверены поиск Kanban, выбор темы Инструменты, сообщение о пустом результате, запись просмотра и сохранение истории после перезагрузки.
+
+[Успешная поставка](https://github.com/IlyaKlinduhov/software-engineering-practices/actions/runs/45468359550) · [Приложение](https://ilyaklinduhov.github.io/software-engineering-practices/) · [YAML](https://github.com/IlyaKlinduhov/software-engineering-practices/blob/main/.github/workflows/delivery.yml)
+
+Azure Web App + SQL заменён статическим приложением GitHub Pages с JSON-данными и историей в браузере. Облачная SQL-база не создавалась; это явно указанное отличие реализации. Платные ресурсы Azure отсутствуют.
 
 ## Документация платформы
 
 - [Python в GitHub Actions](https://docs.github.com/en/actions/tutorials/build-and-test-code/python)
-- [Передача и публикация Pages artifact](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
+- [Многоэтапная публикация Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages)
 - [Self-hosted runners](https://docs.github.com/actions/hosting-your-own-runners/about-self-hosted-runners)
