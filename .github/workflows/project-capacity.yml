@@ -1,0 +1,42 @@
+name: Project capacity
+on:
+  schedule:
+    - cron: '2-59/5 * * * *'
+  workflow_dispatch:
+  issues:
+    types: [assigned, unassigned, closed, reopened]
+  push:
+    branches: [main]
+    paths:
+      - project_capacity.py
+      - test_project_capacity.py
+      - .github/workflows/project-capacity.yml
+permissions:
+  contents: read
+concurrency:
+  group: project-capacity
+  cancel-in-progress: false
+jobs:
+  recalculate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+      - name: Test calculation rules
+        run: python -m unittest -v
+      - name: Read Projects and update capacity rows
+        env:
+          PROJECTS_TOKEN: ${{ secrets.PROJECTS_TOKEN }}
+        run: python project_capacity.py
+      - uses: actions/upload-artifact@v7
+        if: always()
+        with:
+          name: live-project-capacity-${{ github.run_id }}
+          path: project-capacity.json
+          if-no-files-found: ignore
+          retention-days: 30

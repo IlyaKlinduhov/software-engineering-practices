@@ -15,6 +15,8 @@ def build():
     vacation = [date(2026, 11, 23)+timedelta(days=i) for i in range(5)]
     available = sprint_capacity(date(2026, 11, 16), date(2026, 12, 2), 1, vacation)
     summary = capacity_summary(backlog, available)
+    summary['source'] = 'static_example_backlog_json'
+    summary['live_project'] = 'https://github.com/users/IlyaKlinduhov/projects/1/views/3'
     cards = ''.join(f'<article data-topic="{html.escape(m["topic"])}"><small>{html.escape(m["topic"])} · {m["minutes"]} мин</small><h3>{html.escape(m["title"])}</h3><p>{html.escape(m["summary"])}</p><button data-id="{m["id"]}">Изучить материал</button></article>' for m in latest_materials(materials))
     template = (ROOT/'template.html').read_text(encoding='utf-8')
     page = template.replace('{{CARDS}}', cards).replace('{{COUNT}}', str(len(materials)))
